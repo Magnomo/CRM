@@ -1,13 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Entities;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use\Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Usuario extends Authenticatable
 {
+    use SoftDeletes;
     use Notifiable;
 
     /**
@@ -15,9 +17,8 @@ class Usuario extends Authenticatable
      *
      * @var array
      */
-    protected $table='usuarios';
     protected $fillable = [
-        'name', 'email', 'password',
+        'cpf', 'name', 'email','birth','password','status'
     ];
 
     /**

@@ -10,4 +10,15 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+public function homepage(){
+    $titulo= "Titulo da pagina";
+    return view('welcome', ['title'=>$titulo]);
+}
+public function cadastrar(){
+    echo "pagina de cadastro";
+}
+public function login(){
+    echo "pagina de login";
+}
 }

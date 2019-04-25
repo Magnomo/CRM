@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',['uses'=>'Controller@homepage']);
+Route::get('/cadastrar','Controller@cadastrar');
+#rotas de autenticação 
+Route::get('/login','Controller@login');
 
-Route::get('/', function () {
+
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/

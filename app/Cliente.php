@@ -8,7 +8,7 @@ use\Illuminate\Database\Eloquent\SoftDeletes;
 class Cliente extends Model
 {
     //
-    protected $fillable = ['nome','dt_nasc'];
+    protected $fillable = ['nome','dt_nasc','cpf', 'rg', 'sexo'];
     protected $timestamps = false;
     protected $table = 'cliente';
 
