@@ -19,6 +19,7 @@ public function cadastrar(){
     echo "pagina de cadastro";
 }
 public function login(){
+    return view('user.login');
     echo "pagina de login";
 }
 }
