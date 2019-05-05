@@ -20,3 +20,13 @@ Route::get('/login','Controller@login');
     return view('welcome');
 });
 */
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contato/{id?}',function($id=null){
+    return "contato id= $id";
+});
+Route::post('/contato/{id?}',function(){
+    dd($_POST);
+});

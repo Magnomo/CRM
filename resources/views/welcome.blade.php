@@ -93,7 +93,17 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div >
+                <h2>Teste com rotas</h2>
+                <form action="/contato" method="post">
+                     {{ csrf_field() }}
+                     <input type="text" name="name" placeholder="Nome POST">
+                     <button>Enviar</button>
+                </form>
             </div>
+            </div>
+          
+         
         </div>
     </body>
 </html>
